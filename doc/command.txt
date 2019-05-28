@@ -8,8 +8,8 @@
 
 3、同步数据库	
 	#当你在models.py中新增了类时，运行它就可以自动在数据库中创建表了，不用手动创建。
-	python3 sns_backend/manage.py makemigrations gda system permission  ###加模块名
-	python3 sns_backend/manage.py migrate
+	python3 manage.py makemigrations gda system permission  ###加模块名
+	python3 manage.py migrate
 	
 	#清空数据库
 	#django-admin flush
@@ -18,7 +18,7 @@
 	#django-admin inspectdb
 
 4、创建超级管理员
-	python3 sns_backend/manage.py createsuperuser	
+	python3 manage.py createsuperuser	
 	
 
 
@@ -34,7 +34,7 @@ for user in User.objects.all():
 	Token.objects.get_or_create(user=user)
 	
 6、生成所有静态文件
-	python3 sns_backend/manage.py collectstatic
+	python3 manage.py collectstatic
 
 7、运行服务
 	python3 manage.py runserver 0.0.0.0:8000
